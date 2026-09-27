@@ -42,6 +42,6 @@ public class GoogleOAuth2SuccessHandler implements AuthenticationSuccessHandler{
             userService.createUser(user);
         }
 
-        response.sendRedirect("http://localhost:5173/chat");
+        response.sendRedirect("https://chatapp-frontend-one-red.vercel.app/chat");
     }
 }
