@@ -12,13 +12,8 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     @Bean
-    public GoogleOAuth2SuccessHandler googleOAuth2SuccessHandler(
-            UserService userService,
-            @org.springframework.beans.factory.annotation.Value(
-                    "${app.frontend.url:http://localhost:5173}"
-            ) String frontendUrl
-    ) {
-        return new GoogleOAuth2SuccessHandler(userService, frontendUrl);
+    public GoogleOAuth2SuccessHandler googleOAuth2SuccessHandler(UserService userService) {
+        return new GoogleOAuth2SuccessHandler(userService);
     }
 
     @Bean
