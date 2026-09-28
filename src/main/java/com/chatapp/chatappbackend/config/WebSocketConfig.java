@@ -21,7 +21,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
         registry.addEndpoint("/ws")
                 .setAllowedOrigins(
                         "http://localhost:5173",
-                        "https://chatapp-frontend-one-red.vercel.app/chat"
+                        "https://chatapp-frontend-one-red.vercel.app"
                 )
                 .withSockJS();
     }
